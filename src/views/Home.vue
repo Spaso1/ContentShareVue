@@ -132,14 +132,14 @@ export default {
       this.showCreator = true;
     },
     onFileSaved() {
-      this.fetchFiles(); // Refresh the file list
+      this.$refs.fileList.fetchFiles(); // Refresh the file list
     },
     cancelEdit() {
       this.currentFileId = null;
     },
     onFileCreated() {
       this.showCreator = false;
-      this.fetchFiles(); // Refresh the file list
+      this.$refs.fileList.fetchFiles(); // Refresh the file list
     },
     cancelCreate() {
       this.showCreator = false;
@@ -197,7 +197,7 @@ export default {
       this.showLoginDialog = true;
     },
     onFileDeleted() {
-      this.fetchFiles(); // 刷新文件列表
+      this.$refs.fileList.fetchFiles(); // 刷新文件列表
     }
   }
 };
